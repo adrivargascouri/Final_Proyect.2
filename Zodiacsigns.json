@@ -1,0 +1,14 @@
+{
+    "Aries": [{"message": "You are courageous and energetic!"}],
+    "Taurus": [{"message": "You are reliable and patient."}],
+    "Gemini": [{"message": "You are versatile and curious."}],
+    "Cancer": [{"message": "You are intuitive and compassionate."}],
+    "Leo": [{"message": "You are confident and charismatic."}],
+    "Virgo": [{"message": "You are analytical and kind."}],
+    "Libra": [{"message": "You are diplomatic and fair-minded."}],
+    "Scorpio": [{"message": "You are passionate and resourceful."}],
+    "Sagittarius": [{"message": "You are adventurous and optimistic."}],
+    "Capricorn": [{"message": "You are disciplined and ambitious."}],
+    "Aquarius": [{"message": "You are innovative and independent."}],
+    "Pisces": [{"message": "You are empathetic and artistic."}]
+}
