@@ -10,12 +10,36 @@ from get_and_check import get_and_check_days, get_and_check_months
 #Function to load the zodiac sign data from JSON file
 
 def load_data():
+    """
+    Loads the zodiac sign data from a JSON file.
+
+    Reads the contents of the 'Zodiacsigns.json' file and returns the data as a Python dictionary.
+
+    Returns:
+        dict: Zodiac signs data loaded from the JSON file.
+    """
     with open ("Zodiacsigns.json", "r") as z:
         return json.load(z)
 
 #Function to show the user's zodiac sign based on their birthdate
     
 def show_zodiac_sign(result_label,entry_day,entry_month,zodiac_signs):
+    """
+    Determines and displays the user's zodiac sign based on their birthdate.
+
+    Retrieves the user's day and month of birth from the provided input fields,
+    validates them, calculates the zodiac sign, and displays the zodiac sign
+    along with a message in the result label.
+
+    Args:
+        result_label (tk.Label): The label to display the result (zodiac sign message).
+        entry_day (tk.Entry): The entry field for the day of birth.
+        entry_month (tk.Entry): The entry field for the month of birth.
+        zodiac_signs (dict): The loaded zodiac signs data.
+
+    Returns:
+        None
+    """
     try:
         #Get the day and month input by the user
 
@@ -54,6 +78,20 @@ def show_zodiac_sign(result_label,entry_day,entry_month,zodiac_signs):
 # Function to show the user's season based on their birth month
 
 def show_season(result_label, entry_month):
+    """
+    Determines and displays the user's season based on their birth month.
+
+    Takes the month input from the user, validates it, and then determines the
+    corresponding season (Winter, Spring, Summer, Autumn) and displays it
+    in the result label.
+
+    Args:
+        result_label (tk.Label): The label to display the season.
+        entry_month (tk.Entry): The entry field for the month of birth.
+
+    Returns:
+        None
+    """
     try:
         #Get the month input by the user and validate it 
         month = get_and_check_months(entry_month.get())
@@ -76,6 +114,16 @@ def show_season(result_label, entry_month):
 
 # Main function that sets up the graphical user interface (GUI)
 def main():
+    """
+    The main function that sets up the graphical user interface (GUI).
+
+    Creates the Tkinter window, loads the necessary background image,
+    and sets up the user interface components (labels, entry fields, buttons).
+    It also binds the functions for showing zodiac signs and seasons to the respective buttons.
+
+    Returns:
+        None
+    """
     
     global zodiac_signs
     # Load zodiac signs data
